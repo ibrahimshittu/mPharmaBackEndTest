@@ -20,7 +20,7 @@ class DiagnosisListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Diagnosis
-        fields = ['category_code', 'code', 'full_code', 'description', 'category',
+        fields = ['id', 'category_code', 'code', 'full_code', 'description', 'category',
                   'category_title', 'code_type', 'created_at']
 
 
@@ -30,4 +30,4 @@ class CategoryListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = ['code', 'title', 'created_at']
+        fields = ['id', 'code', 'title', 'created_at']

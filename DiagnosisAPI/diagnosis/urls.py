@@ -3,9 +3,9 @@ from .views import DiagnosisListAPIView, DiagnosisDetailAPIView, CategoryListAPI
 
 urlpatterns = [
     path('diagnosis/', DiagnosisListAPIView.as_view(), name='diagnosis-list'),
-    path('diagnosis/<int:pk>/', DiagnosisDetailAPIView.as_view(),
+    path('diagnosis/<int:id>/', DiagnosisDetailAPIView.as_view(),
          name='diagnosis-detail'),
     path('category/', CategoryListAPIView.as_view(), name='category-list'),
-    path('category/<int:pk>/', CategoryDetailAPIView.as_view(),
+    path('category/<int:id>/', CategoryDetailAPIView.as_view(),
          name='category-detail'),
 ]
