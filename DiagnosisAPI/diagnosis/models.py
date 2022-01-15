@@ -41,7 +41,7 @@ class Diagnosis(models.Model):
 
 
 class ICD_File(models.Model):
-    file = models.FileField(upload_to='files/', null=False, blank=False)
+    file = models.FileField(upload_to='icd_codes/', null=False, blank=False)
     remark = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
