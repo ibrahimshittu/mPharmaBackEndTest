@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Category, Diagnosis
+from .models import Category, Diagnosis, ICD_File
 
-# Register your models here.
 
 admin.site.register(Category)
 admin.site.register(Diagnosis)
+admin.site.register(ICD_File)

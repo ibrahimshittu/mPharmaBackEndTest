@@ -1,10 +1,12 @@
-from django.shortcuts import render
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.response import Response
-from rest_framework import status
-from .models import Diagnosis, Category
-from .serializers import DiagnosisListSerializer, CategoryListSerializer
+from rest_framework import status, views
+from .models import Diagnosis, Category, ICD_File
+from .serializers import DiagnosisListSerializer, CategoryListSerializer, ICD_FileSerializer
 from .renderer import DiagnosisRenderer
+
+# imort parser in rest_framework
+from rest_framework.parsers import FileUploadParser, MultiPartParser
 
 
 # Create your views here.
@@ -58,3 +60,16 @@ class CategoryDetailAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
     serializer_class = CategoryListSerializer
     lookup_field = "id"
+
+
+class ICD_FileAPIView(views.APIView):
+    parser_classes = (MultiPartParser,)
+
+    def post(self, request):
+        file_serializer = ICD_FileSerializer(data=request.data)
+
+        if file_serializer.is_valid():
+            file_serializer.save()
+            return Response(file_serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)

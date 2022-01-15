@@ -38,3 +38,13 @@ class Diagnosis(models.Model):
 
     def __str__(self) -> str:
         return self.code
+
+
+class ICD_File(models.Model):
+    file = models.FileField(upload_to='files/', null=False, blank=False)
+    remark = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return self.remark

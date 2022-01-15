@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Diagnosis, Category
+from .models import Diagnosis, Category, ICD_File
 
 
 class DiagnosisListSerializer(serializers.ModelSerializer):
@@ -31,3 +31,16 @@ class CategoryListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ['id', 'code', 'title', 'created_at']
+
+
+class ICD_FileSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ICD_File
+        fields = ['id', 'file', 'remark', 'created_at']
+
+    def validate(self, data):
+        if data['file'].content_type != 'text/csv':
+            raise serializers.ValidationError(
+                'File must be a CSV file.')
+        return data
