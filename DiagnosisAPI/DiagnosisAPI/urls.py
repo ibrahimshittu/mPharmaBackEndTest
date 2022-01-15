@@ -21,9 +21,9 @@ from django.urls import path, include
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Snippets API",
+        title="Diagnosis API",
         default_version='v1',
-        description="Test description",
+        description="API for diagnosis",
         terms_of_service="https://www.google.com/policies/terms/",
         contact=openapi.Contact(email="contact@snippets.local"),
         license=openapi.License(name="BSD License"),
@@ -38,6 +38,7 @@ urlpatterns = [
     path('', include('diagnosis.urls')),
     path('docs/', schema_view.with_ui('swagger',
                                       cache_timeout=0), name='schema-swagger-ui'),
+    path('api/', schema_view.without_ui(cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc',
                                        cache_timeout=0), name='schema-redoc'),
 ]
