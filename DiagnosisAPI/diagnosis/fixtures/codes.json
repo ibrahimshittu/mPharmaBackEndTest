@@ -1,0 +1,242 @@
+[
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 1,
+        "fields": {
+            "code": "1234",
+            "description": "Cholera due to Vibrio cholerae 01, biovar cholerae",
+            "category": 1,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 2,
+        "fields": {
+            "code": "1234",
+            "description": "Typhoid meningitis",
+            "category": 2,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 3,
+        "fields": {
+            "code": "1234",
+            "description": "Paratyphoid fever A",
+            "category": 3,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 4,
+        "fields": {
+            "code": "1234",
+            "description": "Paratyphoid fever B",
+            "category": 4,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 5,
+        "fields": {
+            "code": "1234",
+            "description": "Paratyphoid fever C",
+            "category": 5,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 6,
+        "fields": {
+            "code": "1234",
+            "description": "Paratyphoid fever, unspecified",
+            "category": 6,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 7,
+        "fields": {
+            "code": "1234",
+            "description": "Salmonella sepsis",
+            "category": 7,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 8,
+        "fields": {
+            "code": "1234",
+            "description": "Other specified salmonella infections",
+            "category": 10,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 9,
+        "fields": {
+            "code": "2",
+            "description": "Salmonella pneumonia",
+            "category": 9,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 10,
+        "fields": {
+            "code": "4",
+            "description": "Salmonella osteomyelitis",
+            "category": 9,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 11,
+        "fields": {
+            "code": "1234",
+            "description": "Salmonella infection, unspecified",
+            "category": 11,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 12,
+        "fields": {
+            "code": "1234",
+            "description": "Shigellosis due to Shigella flexneri",
+            "category": 12,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 13,
+        "fields": {
+            "code": "2",
+            "description": "Enteroinvasive Escherichia coli infection",
+            "category": 13,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 14,
+        "fields": {
+            "code": "1234",
+            "description": "Enterocolitis due to Clostridium difficile, recurrent",
+            "category": 14,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 15,
+        "fields": {
+            "code": "1234",
+            "description": "Other specified bacterial intestinal infections",
+            "category": 15,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 16,
+        "fields": {
+            "code": "1234",
+            "description": "Bacterial intestinal infection, unspecified",
+            "category": 16,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 17,
+        "fields": {
+            "code": "1234",
+            "description": "Botulism food poisoning",
+            "category": 17,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 18,
+        "fields": {
+            "code": "1234",
+            "description": "Chronic intestinal amebiasis",
+            "category": 18,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 19,
+        "fields": {
+            "code": "1234",
+            "description": "Amebic cystitis",
+            "category": 19,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    },
+    {
+        "model": "diagnosis.Diagnosis",
+        "pk": 20,
+        "fields": {
+            "code": "1234",
+            "description": "Amebiasis, unspecified",
+            "category": 20,
+            "code_type": "ICD_10",
+            "created_at": "2022-01-16T17:41:28+00:00",
+            "updated_at": "2022-01-16T17:41:28+00:00"
+        }
+    }
+]

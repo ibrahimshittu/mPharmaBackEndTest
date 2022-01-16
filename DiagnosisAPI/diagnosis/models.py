@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Category(models.Model):
     code = models.CharField(max_length=16, null=False, unique=True)
@@ -26,8 +24,7 @@ class Diagnosis(models.Model):
         ('ICD_11', 'ICD_11'),
     ]
 
-    code = models.CharField(max_length=16, null=False,
-                            blank=False, unique=True)
+    code = models.CharField(max_length=16, null=False, blank=False)
     description = models.TextField(max_length=1024, null=False, blank=False)
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE)
