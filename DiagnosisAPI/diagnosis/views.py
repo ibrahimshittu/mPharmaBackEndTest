@@ -1,15 +1,12 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.response import Response
 from rest_framework import status, views
-from .models import Diagnosis, Category, ICD_File
+from .models import Diagnosis, Category
 from .serializers import DiagnosisListSerializer, CategoryListSerializer, ICD_FileSerializer
 from .renderer import DiagnosisRenderer
+from rest_framework.parsers import MultiPartParser
+from drf_yasg.utils import swagger_auto_schema
 
-# imort parser in rest_framework
-from rest_framework.parsers import FileUploadParser, MultiPartParser
-
-
-# Create your views here.
 
 class DiagnosisListAPIView(ListCreateAPIView):
     queryset = Diagnosis.objects.all()
@@ -65,6 +62,7 @@ class CategoryDetailAPIView(RetrieveUpdateDestroyAPIView):
 class ICD_FileAPIView(views.APIView):
     parser_classes = (MultiPartParser,)
 
+    @swagger_auto_schema(request_body=ICD_FileSerializer)
     def post(self, request):
         file_serializer = ICD_FileSerializer(data=request.data)
 

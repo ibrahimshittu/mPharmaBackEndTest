@@ -18,9 +18,7 @@ class Diagnosis(models.Model):
 
     ICD_TYPES = [
         ('ICD_10', 'ICD_10'),
-        ('ICD_8a', 'ICD_8a'),
         ('ICD_9', 'ICD_9'),
-        ('ICD-9-CM', 'ICD-9-CM'),
         ('ICD_11', 'ICD_11'),
     ]
 
