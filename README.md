@@ -22,3 +22,9 @@ git clone https://github.com/ibrahimshittu/mPharmaBackendTest/
 cd DiagnosisAPI
 pip install -r requirements.txt
 ```
+
+#### 3 - Create .env file
+```
+cd DiagnosisAPI
+pip install -r requirements.txt
+```
