@@ -50,3 +50,15 @@ docker-compose run web python manage.py test
 docker-compose run web python manage.py loaddata category.json
 docker-compose run web python manage.py loaddata codes.json
 ```
+
+##  Documentation 
+
+The documentation can be accessed via Swagger, ReDoc or importing the api in json format to Postman
+
+* Swagger Documentation
+```http://127.0.0.1/docs/```
+* ReDoc Documentation
+```http://127.0.0.1/redoc/```
+* JSON API 
+```http://127.0.0.1/api_json/```
+
