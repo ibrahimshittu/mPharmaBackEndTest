@@ -10,7 +10,7 @@
 - Retrieve a single diagnosis code
 - Upload ICD CSV files containing diagnosis codes 
 
-###  Setting Up
+##  Setting Up
 
 #### 1 - Clone repo
 ```
@@ -21,7 +21,7 @@ cd DiagnosisAPI
 #### 2 - Create .env file
 
 The .env file should be in the same roo as settings.py file "/DiagnosisAPI/DiagnosisAPI/.env". 
-The foloowing information should be provided in the .env file; SECRET_KEY & PostgreSQL DB keys
+The following information should be provided in the .env file; SECRET_KEY & PostgreSQL DB keys
 
 ```
 SECRET_KEY=
@@ -40,13 +40,12 @@ docker-compose run web python manage.py migrate
 docker-compose up
 ```
 
-
 #### 5 - Testing the Application
 ```
 docker-compose run web python manage.py test
 ```
 
-#### 6 - loading initial data fixtures
+#### 6 - Load initial data fixtures
 ```
 docker-compose run web python manage.py loaddata category.json
 docker-compose run web python manage.py loaddata codes.json
