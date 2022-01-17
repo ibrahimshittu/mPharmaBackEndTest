@@ -24,11 +24,11 @@ The .env file should be in the same roo as settings.py file "/DiagnosisAPI/Diagn
 The following information should be provided in the .env file; SECRET_KEY & PostgreSQL DB keys
 
 ```
-SECRET_KEY=
-NAME=
-USER=
-PASSWORD=
-HOST=
+export SECRET_KEY=
+export NAME=
+export USER=
+export PASSWORD=
+export HOST=
 ```
 #### 3 - Makng Initial Migrations
 ```
