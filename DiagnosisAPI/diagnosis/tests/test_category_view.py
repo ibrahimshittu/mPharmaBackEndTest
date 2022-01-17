@@ -84,11 +84,6 @@ class CategoryViewTest(APITestCase):
         self.assertEqual(response.data['code'], 'CAT1')
         self.assertEqual(response.data['title'], 'Category 1')
 
-    def test_get_category_with_invalid_id(self):
-        self.url = reverse('category-detail', args=[9999])
-        response = self.client.get(self.url)
-        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
-
     def test_get_category_list(self):
         self.url = reverse('category-list')
         response = self.client.post(
@@ -99,3 +94,8 @@ class CategoryViewTest(APITestCase):
         self.url = reverse('category-list')
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_get_category_with_invalid_id(self):
+        self.url = reverse('category-detail', args=[9999])
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)

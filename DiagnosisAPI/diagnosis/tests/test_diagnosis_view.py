@@ -99,16 +99,6 @@ class DiagnosisViewTest(APITestCase):
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-    def test_get_diagnosis_detail(self):
-        response = self.client.post(
-            self.url, self.valid_data, format='json')
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        self.assertEqual(response.data['code'], 'DIA1')
-        self.assertEqual(response.data['description'], 'Diagnosis 1')
-        self.url = reverse('diagnosis-detail', args=[response.data['id']])
-        response = self.client.get(self.url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-
     def test_delete_diagnosis_detail(self):
         response = self.client.post(
             self.url, self.valid_data, format='json')
@@ -118,3 +108,13 @@ class DiagnosisViewTest(APITestCase):
         self.url = reverse('diagnosis-detail', args=[response.data['id']])
         response = self.client.delete(self.url)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+    def test_get_diagnosis_detail(self):
+        response = self.client.post(
+            self.url, self.valid_data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(response.data['code'], 'DIA1')
+        self.assertEqual(response.data['description'], 'Diagnosis 1')
+        self.url = reverse('diagnosis-detail', args=[response.data['id']])
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
