@@ -20,7 +20,7 @@ cd DiagnosisAPI
 
 #### 2 - Create .env file
 
-The .env file should be in the same roo as settings.py file "/DiagnosisAPI/DiagnosisAPI/.env". 
+The .env file should be in the same roo as settings.py file ```/DiagnosisAPI/DiagnosisAPI/.env```. 
 The following information should be provided in the .env file; SECRET_KEY & PostgreSQL DB keys
 
 ```
