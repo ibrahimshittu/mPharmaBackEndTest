@@ -10,6 +10,15 @@
 - Retrieve a single diagnosis code
 - Upload ICD CSV files containing diagnosis codes 
 
+##  Technologies 
+
+* Python3
+* Django
+* Django Rest Framework
+* PostgreSQL
+* Docker
+
+
 ##  Setting Up
 
 #### 1 - Clone repo
@@ -17,38 +26,25 @@
 git clone https://github.com/ibrahimshittu/mPharmaBackendTest/
 cd DiagnosisAPI
 ```
-
-#### 2 - Create .env file
-
-The .env file should be in the same roo as settings.py file "/DiagnosisAPI/DiagnosisAPI/.env". 
-The following information should be provided in the .env file; SECRET_KEY & PostgreSQL DB keys
-
-```
-export SECRET_KEY=
-export NAME=
-export USER=
-export PASSWORD=
-export HOST=
-```
-#### 3 - Makng Initial Migrations
+#### 2 - Makng Initial Migrations
 ```
 docker-compose run web python manage.py migrate
 ```
 
-#### 4 - Running the Application
-```
-docker-compose up
-```
-
-#### 5 - Testing the Application
+#### 3 - Testing the Application
 ```
 docker-compose run web python manage.py test
 ```
 
-#### 6 - Load initial data fixtures
+#### 4 - Load initial data fixtures
 ```
 docker-compose run web python manage.py loaddata category.json
 docker-compose run web python manage.py loaddata codes.json
+```
+
+#### 5 - Running the Application
+```
+docker-compose up 
 ```
 
 ##  Documentation 
