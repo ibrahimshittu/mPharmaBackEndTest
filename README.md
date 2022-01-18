@@ -10,6 +10,15 @@
 - Retrieve a single diagnosis code
 - Upload ICD CSV files containing diagnosis codes 
 
+##  Technologies 
+
+* Python3
+* Django
+* Django Rest Framework
+* PostgreSQL
+* Docker
+
+
 ##  Setting Up
 
 #### 1 - Clone repo
@@ -22,20 +31,20 @@ cd DiagnosisAPI
 docker-compose run web python manage.py migrate
 ```
 
-#### 3 - Running the Application
-```
-docker-compose up
-```
-
-#### 4 - Testing the Application
+#### 3 - Testing the Application
 ```
 docker-compose run web python manage.py test
 ```
 
-#### 5 - Load initial data fixtures
+#### 4 - Load initial data fixtures
 ```
 docker-compose run web python manage.py loaddata category.json
 docker-compose run web python manage.py loaddata codes.json
+```
+
+#### 5 - Running the Application
+```
+docker-compose up 
 ```
 
 ##  Documentation 
