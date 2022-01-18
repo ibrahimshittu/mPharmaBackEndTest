@@ -21,12 +21,12 @@
 
 ##  Setting Up
 
-#### 1 - Clone repo
+#### 1 - Clone repository
 ```
 git clone https://github.com/ibrahimshittu/mPharmaBackendTest/
 cd DiagnosisAPI
 ```
-#### 2 - Makng Initial Migrations
+#### 2 - Making Initial Migrations
 ```
 docker-compose run web python manage.py migrate
 ```
