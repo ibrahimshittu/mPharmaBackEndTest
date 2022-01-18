@@ -14,3 +14,8 @@ services:
     image: postgres
     volumes:
       - ./db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    
