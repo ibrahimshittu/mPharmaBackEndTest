@@ -26,23 +26,29 @@
 git clone https://github.com/ibrahimshittu/mPharmaBackendTest/
 cd DiagnosisAPI
 ```
-#### 2 - Making Initial Migrations
+
+#### 2 - Building docker image
+```
+docker-compose build
+```
+
+#### 3 - Making Initial Migrations
 ```
 docker-compose run web python manage.py migrate
 ```
 
-#### 3 - Testing the Application
+#### 4 - Testing the Application
 ```
 docker-compose run web python manage.py test
 ```
 
-#### 4 - Load initial data fixtures
+#### 5 - Load initial data fixtures
 ```
 docker-compose run web python manage.py loaddata category.json
 docker-compose run web python manage.py loaddata codes.json
 ```
 
-#### 5 - Running the Application
+#### 6 - Running the Application
 ```
 docker-compose up 
 ```
