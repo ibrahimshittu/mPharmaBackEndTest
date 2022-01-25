@@ -22,7 +22,8 @@ class Diagnosis(models.Model):
         ('ICD_11', 'ICD_11'),
     ]
 
-    code = models.CharField(max_length=16, null=False, blank=False)
+    code = models.CharField(max_length=16, null=False,
+                            blank=False, unique=True)
     description = models.TextField(max_length=1024, null=False, blank=False)
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE)
@@ -31,8 +32,10 @@ class Diagnosis(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self) -> str:
-        return self.code
+    def _full_code(self) -> str:
+        return f'{self.category.code}{self.code}'
+
+    full_code = property(_full_code)
 
 
 class ICD_File(models.Model):

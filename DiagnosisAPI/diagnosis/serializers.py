@@ -5,6 +5,7 @@ from .models import Diagnosis, Category, ICD_File
 class DiagnosisListSerializer(serializers.ModelSerializer):
     code = serializers.CharField(max_length=16)
     description = serializers.CharField()
+    code_type = serializers.CharField(max_length=16)
     full_code = serializers.SerializerMethodField()
     category_code = serializers.SerializerMethodField()
     category_title = serializers.SerializerMethodField()

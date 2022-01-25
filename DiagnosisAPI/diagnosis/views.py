@@ -34,7 +34,6 @@ class CategoryListAPIView(ListCreateAPIView):
     serializer_class = CategoryListSerializer
     renderer_classes = [OutputRenderer]
 
-
     def create(self, request):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
